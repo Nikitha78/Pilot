@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JobPilot</title>
+<link rel="stylesheet" href="style.css">
+<script src="../lib/mammoth.browser.min.js"></script>
+</head>
+<body>
+<header class="top">
+  <div class="in">
+    <div class="logo">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7FA0FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l7-7 2 6 6 2-7 7-2-6z"/></svg>
+      JobPilot
+    </div>
+    <nav class="tabs">
+      <a href="#jobs" data-tab="jobs">Jobs</a>
+      <a href="#settings" data-tab="settings">Settings</a>
+      <a href="#profile" data-tab="profile">Profile &amp; resume</a>
+    </nav>
+    <div class="status" id="status"></div>
+    <div style="flex:1"></div>
+    <button class="btn primary" id="scanNow" type="button">Scan now</button>
+  </div>
+</header>
+<main id="view"></main>
+<div class="overlay" id="overlay"><div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Job details"></div></div>
+<div class="toast" id="toast" role="status"></div>
+<script type="module" src="dashboard.js"></script>
+</body>
+</html>
