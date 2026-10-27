@@ -1,0 +1,11 @@
+{
+  "name": "jobpilot",
+  "version": "1.5.5",
+  "private": true,
+  "description": "Chrome extension that finds new matching jobs on company career sites and job portals, scores them against your resume, emails you the matches and fills applications for you to review.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs"
+  },
+  "license": "MIT"
+}

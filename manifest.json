@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "JobPilot – Job Finder & Autofill",
+  "version": "1.5.5",
+  "description": "Finds new matching jobs on LinkedIn, Dice, Indeed, ZipRecruiter and company sites every few hours, scores them against your resume, and fills applications for you to review and submit.",
+  "permissions": ["storage", "unlimitedStorage", "alarms", "tabs", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "action": {
+    "default_popup": "pages/popup.html",
+    "default_title": "JobPilot",
+    "default_icon": { "16": "icons/16.png", "48": "icons/48.png", "128": "icons/128.png" }
+  },
+  "icons": { "16": "icons/16.png", "48": "icons/48.png", "128": "icons/128.png" },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content/autofill.js"],
+      "all_frames": true,
+      "run_at": "document_idle"
+    }
+  ]
+}
